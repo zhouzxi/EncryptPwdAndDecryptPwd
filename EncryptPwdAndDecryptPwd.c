@@ -35,8 +35,8 @@ INT32 EncryptPwdStr(UINT8 *pszPwdStr, UINT32 iInPwdLen, UINT32 iOperFlag);
 INT32 main()
 {
     UINT8 szConfigFile[128] = {0};
-    UINT8 szPassword[128] = {0};
-    INT32 iRetVal         = 0;
+    UINT8 szPassword[128]   = {0};
+    INT32 iRetVal           = 0;
     UINT32 iDecryptFlag     = 0;
  
     // 获取配置文件全路径(包括文件名)
@@ -128,7 +128,7 @@ INT32 EncryptPwdStr(UINT8 *pszPwdStr, UINT32 iInPwdLen, UINT32 iOperFlag)
        else                   // 解密
        {
            pszPwdStr[iLoopFlag] = pszPwdStr[iLoopFlag] - 16;
-        }
+       }
    }
  
    return 0;                 // 返回0表示该函数执行成功
